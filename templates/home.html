@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hustlers careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
       #banner {
-        width: 100%;
         height: 360px;
+        width: 100%;
         object-fit: cover;
-      }
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-      }
-      .bodytext{
-        font-family: Roboto;
-        color: rgb(10, 10, 10);
-      }
-      #container {
-        max-width: 720px;
-        margin: 0 auto 0 auto;
       }
     </style>
   </head>
   
   <body>
-    <div id="container">
-       <h1>hustlers' careers</h1>
-          <img id="banner" src = "https://de3abc35-d2b9-4635-8cfa-66b5390876a2-00-2cjvyy5qfnr4b.spock.replit.dev/static/hustler.jpg" height="320">
+    <div class="container">
+       <h1 class="text-center mt-2 mb-4">hustlers' careers</h1>
+          <img id="banner" class="img-fluid" src = "https://de3abc35-d2b9-4635-8cfa-66b5390876a2-00-2cjvyy5qfnr4b.spock.replit.dev/static/hustler.jpg" height="320">
 
-        <h2>about hustlers</h2>
-          <p class="bodytext">Being a hustler is about the way one lives one’s life. Going out on the streets, or wherever, making money and working hard for it. A hustler is not lazy, he’s consistently out earning money. He gets the money by using his smarts and out cunning everyone out there. A hustler has ambition and a more serious approach to life. He’s more mature</br>
+        <h2 class="text-center mt-2 mb-4">about hustlers</h2>
+          <p class="lead">Being a hustler is about the way one lives one’s life. Going out on the streets, or wherever, making money and working hard for it. A hustler is not lazy, he’s consistently out earning money. He gets the money by using his smarts and out cunning everyone out there. A hustler has ambition and a more serious approach to life. He’s more mature</br>
       ~gayton mckenzie.
       </p>
-          <h2>open positions</h2>
-          <p class="bodytext">show the jobs here</p>
-    </div>
-    <div style="text-align:center;">
-      <button>contact us</button>
-      <p>copyright 2024,hustlers</p>
+          <h2 class="text-center mt-2 mb-4">open positions</h2>
+          <p>
+            <div>
+              {% for job in jobs%}
+              {% include 'jobitem.html' %}
+              {% endfor %}
+            </div>
+             
+          </p>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">contact us</button>
+        <p class="mt-4">copyright 2024,hustlers</p>
+      </div>
+
     </div>
     
   </body>
